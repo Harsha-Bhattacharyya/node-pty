@@ -1,4 +1,9 @@
 {
+  'variables': {
+    # Provide a default value for android_ndk_path to avoid "undefined variable"
+    # errors on Android/Termux where Node.js's common.gypi references this variable.
+    'android_ndk_path%': '',
+  },
   'target_defaults': {
     'dependencies': [
       "<!(node -p \"require('node-addon-api').targets\"):node_addon_api_except",
